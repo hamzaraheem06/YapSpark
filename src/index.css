@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Inter", sans-sarif;
+}
+
+.loading {
+  @apply w-14;
+}
+
+.card.image-full:before {
+  @apply opacity-30;
+}
+
+.btn {
+  @apply w-24;
+}
+
+.underlineEffect {
+  position: relative;
+  display: inline-block;
+  border-radius: 2rem;
+}
+
+.underlineEffect::after {
+  content: "";
+  position: absolute;
+  border-radius: 2rem;
+  left: 5px;
+  bottom: 0px; /* Adjusts position just below the text */
+  height: 5px; /* Thickness of the underline */
+  width: 100%;
+  background: linear-gradient(120deg, #66cc8a, #58b177); /* Vivid gradient */
+  transform: scaleX(0.2); /* Start hidden */
+  transform-origin: left; /* Origin from the left */
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Springy, bounce effect */
+}
+
+.underlineEffect:hover::after {
+  border-radius: 2rem;
+  transform: scaleX(1); /* Expand underline on hover */
+  transform-origin: left;
+}

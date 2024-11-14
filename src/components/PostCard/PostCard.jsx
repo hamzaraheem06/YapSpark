@@ -1,7 +1,7 @@
 import React from "react";
 import databaseService from "../../appwrite/database";
 import { Link } from "react-router-dom";
-import { Button } from "../index";
+import { Button } from "../Index";
 
 function PostCard({ $id, featuredImage, title }) {
   const onclickHandler = () => {};
@@ -22,7 +22,7 @@ function PostCard({ $id, featuredImage, title }) {
             <Button
               buttonType="btn-primary"
               children="Read more"
-              onclick={onclickHandler}
+              onclick={null}
             />
           </div>
         </div>

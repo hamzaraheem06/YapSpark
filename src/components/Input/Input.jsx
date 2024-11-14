@@ -14,14 +14,15 @@ const Input = forwardRef(function Input(
   const id = useId();
 
   return (
-    <label className="form-control w-full max-w-xs" htmlFor={id}>
+    <label className="form-control w-full max-w-xs opacity-80" htmlFor={id}>
       <div className="label">
         <span className="label-text">{label}</span>
         <span className="label-text-alt">{altLabel}</span>
       </div>
       <input
         id={id}
-        disabled={isActive}
+        disabled={!isActive}
+        autoComplete="off"
         type={type}
         placeholder={placeHolder}
         className="input input-bordered w-full max-w-xs"
