@@ -12,7 +12,8 @@ import AlertError from "./Errors/AlertError";
 import InvalidError from "./Errors/InvalidError";
 import SuccessMessage from "./Errors/SuccessMessage";
 import Protected from "./AuthLayout/AuthLayout";
-import { Editor } from "@tinymce/tinymce-react";
+import RTE from "./Editor/RTE";
+import PostForm from "./Editor/PostForm";
 
 export {
   Header,
@@ -29,5 +30,6 @@ export {
   InvalidError,
   SuccessMessage,
   Protected,
-  Editor,
+  RTE,
+  PostForm,
 };

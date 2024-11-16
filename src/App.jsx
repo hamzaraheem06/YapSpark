@@ -10,7 +10,7 @@ import {
   PostCard,
   Login,
   Signup,
-  Editor,
+  RTE,
 } from "./components/Index";
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
   } else {
     return (
       <div className="min-h-screen flex flex-col justify-center items-center">
-        <Editor />
+        <RTE />
       </div>
     );
   }
