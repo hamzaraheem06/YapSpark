@@ -15,10 +15,6 @@
   @apply opacity-30;
 }
 
-.btn {
-  @apply w-24;
-}
-
 .underlineEffect {
   position: relative;
   display: inline-block;

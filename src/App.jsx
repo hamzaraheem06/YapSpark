@@ -12,6 +12,7 @@ import {
   Signup,
   RTE,
 } from "./components/Index";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,7 +40,9 @@ function App() {
   } else {
     return (
       <div className="min-h-screen flex flex-col justify-center items-center">
-        <RTE />
+        <Header />
+        <Outlet />
+        <Footer />
       </div>
     );
   }

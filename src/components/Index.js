@@ -11,7 +11,7 @@ import Signup from "./Signup/Signup";
 import AlertError from "./Errors/AlertError";
 import InvalidError from "./Errors/InvalidError";
 import SuccessMessage from "./Errors/SuccessMessage";
-import Protected from "./AuthLayout/AuthLayout";
+import AuthLayout from "./AuthLayout/AuthLayout";
 import RTE from "./Editor/RTE";
 import PostForm from "./Editor/PostForm";
 
@@ -29,7 +29,7 @@ export {
   AlertError,
   InvalidError,
   SuccessMessage,
-  Protected,
+  AuthLayout,
   RTE,
   PostForm,
 };
