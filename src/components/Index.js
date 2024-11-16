@@ -11,6 +11,8 @@ import Signup from "./Signup/Signup";
 import AlertError from "./Errors/AlertError";
 import InvalidError from "./Errors/InvalidError";
 import SuccessMessage from "./Errors/SuccessMessage";
+import Protected from "./AuthLayout/AuthLayout";
+import { Editor } from "@tinymce/tinymce-react";
 
 export {
   Header,
@@ -26,4 +28,6 @@ export {
   AlertError,
   InvalidError,
   SuccessMessage,
+  Protected,
+  Editor,
 };

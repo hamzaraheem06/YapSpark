@@ -10,6 +10,7 @@ import {
   PostCard,
   Login,
   Signup,
+  Editor,
 } from "./components/Index";
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
   } else {
     return (
       <div className="min-h-screen flex flex-col justify-center items-center">
-        <Signup />
+        <Editor />
       </div>
     );
   }
