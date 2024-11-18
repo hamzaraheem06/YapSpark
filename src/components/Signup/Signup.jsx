@@ -16,12 +16,10 @@ function Signup() {
   const create = async (data) => {
     setError("");
     try {
-      const userInfo = await authService.createAccount(data);
-      if (userInfo) {
+      const userData = await authService.createAccount(data);
+      if (userData) {
         const userData = await authService.getCurrentUser();
-        if (userData) {
-          dispatch(authLogin(userData));
-        }
+        if (userData) dispatch(authLogin(userData));
         navigate("/");
       }
     } catch (error) {
@@ -88,10 +86,10 @@ function Signup() {
             Sign in
           </Link>
         </p>
+        <div className="py-1">
+          <Button children="Create" buttonType="btn-primary" type="submit" />
+        </div>
       </form>
-      <div className="py-1">
-        <Button children="Create" buttonType="btn-primary" type="submit" />
-      </div>
     </div>
   );
 }

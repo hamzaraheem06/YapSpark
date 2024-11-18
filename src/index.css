@@ -15,6 +15,11 @@
   @apply opacity-30;
 }
 
+.btn svg {
+  @apply w-9;
+  @apply h-9;
+}
+
 .underlineEffect {
   position: relative;
   display: inline-block;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Input, Button, AlertError } from "../Index";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import { login as authLogin } from "../../store/authSlice";
+import { Input, Button, AlertError } from "../Index";
+import { useDispatch } from "react-redux";
 import authService from "../../appwrite/auth";
 import { useForm } from "react-hook-form";
 
@@ -50,10 +50,9 @@ function Login() {
           {...register("email", {
             required: true,
             validate: {
-              matchPattern: (value) =>
-                /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
-                  value
-                ) || "Email entered must be a valid address",
+              matchPatern: (value) =>
+                /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                "Email address must be a valid address",
             },
           })}
         />
@@ -74,10 +73,10 @@ function Login() {
             Sign Up
           </Link>
         </p>
+        <div className="py-1">
+          <Button children="Login" buttonType="btn-primary" type="submit" />
+        </div>
       </form>
-      <div className="py-1">
-        <Button children="Login" buttonType="btn-primary" type="submit" />
-      </div>
     </div>
   );
 }

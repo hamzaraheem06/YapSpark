@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
 import {
@@ -16,7 +16,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     authService
@@ -25,7 +25,7 @@ function App() {
         if (userData) {
           dispatch(login({ userData }));
         } else {
-          // dispatch(logout());
+          dispatch(logout());
         }
       })
       .finally(() => setLoading(false));
@@ -39,7 +39,7 @@ function App() {
     );
   } else {
     return (
-      <div className="min-h-screen flex flex-col justify-center items-center">
+      <div className="min-h-screen flex flex-col justify-between">
         <Header />
         <Outlet />
         <Footer />

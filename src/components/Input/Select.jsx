@@ -21,7 +21,7 @@ const Select = forwardRef(function Select(
         <span className="label-text-alt">{altLabel}</span>
       </div>
       <select className="select select-bordered" id={id} {...props} ref={ref}>
-        <option disabled selected>
+        <option disabled defaultChecked>
           {optionLabel}
         </option>
 

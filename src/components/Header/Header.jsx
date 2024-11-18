@@ -23,6 +23,10 @@ function Header() {
       });
   };
 
+  const logoClickHandler = () => {
+    navigate("/");
+  };
+
   const navItems = [
     {
       name: "Home",
@@ -78,7 +82,13 @@ function Header() {
             {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
-                  <button onClick={navigate(item.slug)}>{item.name}</button>
+                  <button
+                    onClick={() => {
+                      navigate(item.slug);
+                    }}
+                  >
+                    {item.name}
+                  </button>
                 </li>
               ) : null
             )}
@@ -87,8 +97,9 @@ function Header() {
       </div>
       <div className="navbar-center">
         <Link
-          onClick={navigate(navItems[0].slug)}
-          className="btn btn-ghost text-xl"
+          to="/"
+          onClick={logoClickHandler}
+          className="btn btn-ghost text-3xl"
         >
           YapSpark
         </Link>

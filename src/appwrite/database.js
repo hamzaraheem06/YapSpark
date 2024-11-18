@@ -1,6 +1,6 @@
 import { Client, Databases, ID, Query, Storage } from "appwrite"; // importing all the service objects
 
-import config from "../config/config.js"; // importing the .env variables
+import config from "../config/config"; // importing the .env variables
 
 export class DatabaseService {
   client = new Client();
@@ -92,7 +92,7 @@ export class DatabaseService {
         queries
       );
     } catch (error) {
-      console.log("Appwrite service error :: getPosts :: error :", error);
+      console.log("Appwrite serive :: getPosts :: error", error);
       return false;
     }
   }
@@ -104,7 +104,7 @@ export class DatabaseService {
     try {
       return await this.storage.createFile(config.bucketId, ID.unique(), file);
     } catch (error) {
-      console.log("Appwrite service error :: uploadFile :: error :", error);
+      console.log("Appwrite serive :: uploadFile :: error", error);
       return false;
     }
   }
@@ -115,7 +115,7 @@ export class DatabaseService {
       await this.storage.deleteFile(config.bucketId, fileId);
       return true;
     } catch (error) {
-      console.log("Appwrite service error :: deleteFile :: error :", error);
+      console.log("Appwrite serive :: deleteFile :: error", error);
       return false;
     }
   }

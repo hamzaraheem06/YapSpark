@@ -1,11 +1,9 @@
 import React from "react";
 import databaseService from "../../appwrite/database";
 import { Link } from "react-router-dom";
-import { Button } from "../Index";
+// import { Button } from "../Index";
 
 function PostCard({ $id, featuredImage, title }) {
-  const onclickHandler = () => {};
-
   return (
     <Link to={`/post/${$id}`}>
       <div className="card bg-base-100 image-full w-96 shadow-xl">
@@ -16,15 +14,8 @@ function PostCard({ $id, featuredImage, title }) {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">SpiderMan: No way Home{title}</h2>
+          <h2 className="card-title">{title}</h2>
           <p>A Blog about "{title}"</p>
-          <div className="card-actions justify-end">
-            <Button
-              buttonType="btn-primary"
-              children="Read more"
-              onclick={null}
-            />
-          </div>
         </div>
       </div>
     </Link>
